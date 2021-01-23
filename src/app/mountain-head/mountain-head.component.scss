@@ -1,0 +1,451 @@
+$color-blue: #2f89fc;
+
+$color-lime: #bfff00c9;
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.full-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.indent {
+  padding-left: 90px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  background: #121212;
+  opacity: 0.7;
+  -webkit-transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
+}
+.overlay-radial {
+  background: radial-gradient(rgba(42, 47, 63, 0.8), #121212 80%);
+  opacity: 1;
+}
+.page-banner {
+  text-align: center;
+  height: 80vh;
+  min-height: 500px;
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.page-banner-small,
+.page-banner-small .page-banner-inner {
+  height: 750px;
+}
+.page-banner-image {
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  will-change: transform;
+}
+.page-banner-image * {
+  height: 100%;
+}
+.page-banner-inner {
+  height: 100%;
+}
+.page-banner .overlay {
+  opacity: 1;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, rgba(42, 47, 63, 0.7)),
+    color-stop(90%, #121212)
+  );
+  background: linear-gradient(rgba(42, 47, 63, 0.7) 10%, #121212 90%);
+  -webkit-transform: scale(1.01) translate3d(0, 0, 0);
+  transform: scale(1.01) translate3d(0, 0, 0);
+}
+.page-banner .banner-video {
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.page-banner .banner-video video {
+  background-size: cover;
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+}
+body:not(.home)
+  .page-banner
+  + #content
+  > .section:first-child
+  > .section-inner {
+  margin-top: -20vh;
+  -webkit-transform: translate3d(0, 5vh, 0);
+  transform: translate3d(0, 5vh, 0);
+}
+body:not(.home)
+  .page-banner
+  + #content
+  > .section:first-child
+  > .section-big-title {
+  top: -18vh;
+}
+body:not(.home)
+  .page-banner
+  + #content
+  > .section.section-animate:first-child
+  > .section-inner {
+  -webkit-transform: translate3d(0, 0vh, 0);
+  transform: translate3d(0, 0vh, 0);
+}
+.home-banner {
+  height: 115vh;
+}
+.home-banner .page-banner-inner {
+  height: 100vh;
+}
+.mountain-banner {
+  margin-bottom: -20vh;
+  background: url(//www.limely.co.uk/wp-content/themes/limely/images/mountain-banner-bg.jpg)
+    50% 50% no-repeat;
+  background-size: cover;
+}
+.mountain-left,
+.mountain-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  background: url(//www.limely.co.uk/wp-content/themes/limely/images/mountain-banner-right.png)
+    100% 50% no-repeat;
+  background-size: auto 100%;
+  will-change: transform;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+.mountain-left {
+  background-image: url(//www.limely.co.uk/wp-content/themes/limely/images/mountain-banner-left.png);
+  background-position: 0 50%;
+  right: auto;
+  left: 0;
+}
+.mountain-bottom {
+  background: url(//www.limely.co.uk/wp-content/themes/limely/images/mountain-banner-bottom.png)
+    50% 100% no-repeat;
+  background-size: 100% auto;
+  will-change: transform;
+  transition: all 0.3s ease-out;
+}
+.mountain-banner .overlay {
+  background: rgba(42, 47, 63, 0.2);
+}
+.mountain-banner .overlay-top {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, rgba(42, 47, 63, 0)),
+    color-stop(70%, #121212)
+  );
+  background: linear-gradient(rgba(42, 47, 63, 0) 10%, #121212 70%);
+  height: auto;
+  top: 60%;
+}
+.mountain-banner p {
+  font-weight: 600;
+  font-size: 3vw;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  word-spacing: 1px;
+}
+.mountain-banner h2 {
+  font-size: 5vw;
+  letter-spacing: 5px;
+  word-spacing: 1px;
+
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 20vh;
+  // color: $color-lime;
+
+  font-weight: bold;
+  background: -webkit-linear-gradient(270deg, #a7c939, #d8d823);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 1700px) and (min-height: 1100px) {
+  .mountain-left {
+    left: -10% !important;
+  }
+  .mountain-right {
+    right: -3%;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-height: 1050px) {
+  .mountain-left,
+  .mountain-right {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .mountain-left {
+    left: -2%;
+  }
+
+  .mountain-bottom {
+    background-size: 120% auto;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .mountain-left {
+    left: -5%;
+  }
+  .mountain-right {
+    right: -3%;
+  }
+
+  .mountain-bottom {
+    background-size: 140% auto;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .mountain-left {
+    left: -7%;
+  }
+  .mountain-right {
+    right: -4%;
+  }
+
+  .mountain-bottom {
+    background-size: 150% auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .mountain-left {
+    left: -8%;
+  }
+  .mountain-right {
+    right: -4%;
+  }
+
+  .mountain-bottom {
+    background-size: 170% auto;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .mountain-left {
+    left: -10%;
+  }
+  .mountain-right {
+    right: -6%;
+  }
+
+  .mountain-bottom {
+    background-size: 190% auto;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .mountain-left {
+    left: -15%;
+  }
+  .mountain-right {
+    right: -7%;
+  }
+
+  .mountain-bottom {
+    background-size: 220% auto;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .mountain-left {
+    left: -20%;
+  }
+  .mountain-right {
+    right: -9%;
+  }
+  .mountain-bottom {
+    background-size: 240% auto;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .mountain-left {
+    left: -23%;
+  }
+  .mountain-right {
+    right: -10%;
+  }
+  .mountain-bottom {
+    background-size: 260% auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mountain-left {
+    left: -27%;
+  }
+  .mountain-right {
+    right: -15%;
+  }
+  .mountain-bottom {
+    background-size: 280% auto;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .mountain-left {
+    left: -33%;
+  }
+  .mountain-right {
+    right: -20%;
+  }
+  .mountain-bottom {
+    background-size: 300% auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mountain-left {
+    left: -37%;
+  }
+  .mountain-right {
+    right: -25%;
+  }
+  .mountain-bottom {
+    background-size: 330% auto;
+  }
+}
+@media only screen and (max-width: 500px) and (min-height: 650px) {
+  .mountain-left {
+    display: none;
+  }
+  .mountain-right {
+    display: none;
+  }
+  .mountain-banner h2 {
+    font-size: 7vw;
+  }
+  .mountain-banner p {
+    font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mountain-left {
+    left: -40%;
+  }
+  .mountain-right {
+    right: -25%;
+  }
+  .mountain-bottom {
+    background-size: 350% auto;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .mountain-left {
+    left: -45%;
+  }
+  .mountain-right {
+    right: -27%;
+  }
+  .mountain-bottom {
+    background-size: 380% auto;
+  }
+}
+@media only screen and (max-width: 404px) {
+  .mountain-left {
+    display: none;
+  }
+  .mountain-right {
+    display: none;
+  }
+  .mountain-banner h2 {
+    font-size: 7vw;
+  }
+  .mountain-banner p {
+    font-size: 5vw;
+  }
+  .mountain-bottom {
+    background-size: 400% auto;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .mountain-bottom {
+    background-size: 410% auto;
+  }
+}
+@media only screen and (max-width: 393px) {
+  .mountain-bottom {
+    background-size: 420% auto;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .mountain-left {
+    display: none;
+  }
+  .mountain-right {
+    display: none;
+  }
+  .mountain-banner h2 {
+    font-size: 7vw;
+  }
+  .mountain-banner p {
+    font-size: 5vw;
+  }
+  .mountain-bottom {
+    background-size: 440% auto;
+  }
+}
+.page-banner-half {
+  height: auto;
+  padding: 17vh 0;
+}
+.page-banner-half .container > .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.page-banner-half .page-banner-content {
+  text-align: left;
+  padding-bottom: 30px;
+}
+.page-banner-half .page-banner-content h1 {
+  line-height: 1.2;
+}
+.page-banner-half .page-banner-content li:before {
+  background-color: #a7c939;
+}
+body:not(.home)
+  .page-banner-half
+  + #content
+  > .section:first-child
+  > .section-inner {
+  margin-top: -10vh;
+}

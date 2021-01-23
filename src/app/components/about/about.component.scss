@@ -1,0 +1,158 @@
+$color-lime: #bfff00c9;
+
+.about-section {
+  height: fit-content;
+  color: white;
+  margin-top: 25rem;
+}
+
+.author-img {
+  background-image: url(../../../assets/sumanthlogo.jpg);
+  background-position: center;
+  background-size: cover;
+  // overflow: hidden;
+  height: 94vh;
+  @media screen and (max-width: 764px) {
+    background-image: none;
+    display: none;
+  }
+}
+.about-desc {
+  position: relative;
+}
+.wrap .about-desc .bold-text {
+  position: absolute;
+  top: -100px;
+  left: -50px;
+  right: 0;
+  bottom: 0;
+  font-size: 20rem;
+  font-weight: 700 !important;
+  color: rgba(255, 255, 255, 0.08);
+  text-transform: uppercase;
+  @media screen and (max-width: 1300px) {
+    font-size: 18rem;
+    top: -80px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 16rem;
+  }
+
+  @media screen and (max-width: 990px) {
+    top: -50px;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 18rem;
+    top: -60px;
+    left: -20px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 16rem;
+    top: -50px;
+
+    left: 0px;
+  }
+  @media screen and (max-width: 490px) {
+    font-size: 14.5rem;
+    top: -40px;
+    left: -10px;
+  }
+}
+h2 {
+  font-size: 3.5rem;
+}
+p {
+  color: #8c8c8c;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: justify;
+  @media screen and (max-width: 764px) {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+}
+
+.ftco-footer-social {
+  display: flex;
+  justify-content: space-around;
+}
+// .ftco-footer-social li a{
+//   font-size: 3.5rem;
+//   cursor: pointer;
+
+//   &:hover {
+//     color: white;
+//     font-size: large;
+//   }
+// }
+.ftco-footer-social li a {
+  height: 60px;
+  width: 60px;
+  display: block;
+  float: left;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  position: relative;
+  color: $color-lime;
+
+  &:hover {
+    i {
+      color: white;
+    }
+  }
+  i {
+    font-size: 30px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+  }
+}
+
+#services {
+  color: white;
+  margin-top: 15rem;
+}
+.heading-section {
+  span {
+    // position: absolute;
+    // top: -190px;
+    // left: -50px;
+    // right: 0;
+    // bottom: 0;
+    font-size: 2rem;
+    // font-weight: 700 !important;
+    font-weight: 400;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1.5;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.5;
+  }
+}
+.icon {
+  font-size: 4rem;
+  // color: #2f89fc;
+  color: $color-lime;
+}
+.media-body {
+  flex: 1;
+  .heading {
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+}
+.media {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

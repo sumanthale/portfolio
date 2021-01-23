@@ -1,0 +1,30 @@
+$color-blue: #2f89fc;
+
+$color-lime: #bfff00c9;
+app-navbar {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+
+.progress-bar {
+  float: left;
+  height: 100%;
+  z-index: 99999;
+  max-width: 100%;
+  background-color: #2f89fc;
+  background-color: #bfff00c9;
+
+  -webkit-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
+}
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: transparent;
+  z-index: 9999;
+}

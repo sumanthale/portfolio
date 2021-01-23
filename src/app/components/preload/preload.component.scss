@@ -1,0 +1,89 @@
+.preload {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-image: url("../../../assets/greenmountain.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: opacity 0.5s ease;
+  background-color: black;
+}
+.plane {
+  height: 20vw;
+  width: 20vw;
+  transform: translateY(-50%);
+  animation: plane 1s ease infinite alternate;
+  z-index: 5;
+}
+.cloud img {
+  height: 9vw;
+  position: absolute;
+  right: 0;
+}
+.cloud1 {
+  top: 5%;
+  transform: translate(100%, 5%);
+  animation: cloud 3s ease-in infinite;
+  animation-delay: 0;
+}
+.cloud2 {
+  top: 10%;
+  transform: translate(100%, 10%);
+  animation: cloud 3s ease-in infinite;
+  animation-delay: 2s;
+}
+.cloud3 {
+  top: 35%;
+  transform: translate(100%, 35%);
+  animation: cloud 3s ease-in infinite;
+  animation-delay: 1s;
+}
+
+@keyframes plane {
+  0% {
+    transform: translateY(-50%);
+  }
+  // 25% {
+  //   transform: translateY(-40%);
+  // }
+  // 50% {
+  //   transform: translateY(-20%);
+  // }
+  // 75% {
+  //   transform: translateY(-30%);
+  // }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes cloud {
+  0% {
+    right: -15%;
+  }
+
+  100% {
+    right: 130%;
+  }
+}
+.landing {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  font-weight: 700;
+  font-size: 10vh;
+  width: 100%;
+  // color: #47ff83;
+  color: white;
+  animation: plane 1s ease infinite alternate;
+  // text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 20px;
+}

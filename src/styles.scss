@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-blue: #2f89fc;
+
+$color-lime: #bfff00c9;
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  // @include respond(tab-land) {
+  //   // width < 1200?
+  //   font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  // }
+  @media only screen and (max-width: 37.5em) {
+    // font-size: ;
+  } //600px
+  @media only screen and (min-width: 112.5em) {
+    font-size: 75%;
+  } //1800
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%;
+  } //1200px
+  @media only screen and (max-width: 56.25em) {
+    font-size: 50%;
+  } //900px
+  @media only screen and (max-width: 37.5em) {
+    font-size: 40%;
+  } //600px
+}
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  // background-color: #2a2f3f !important;
+  background-color: #121212 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.hiding {
+  opacity: 0;
+}
+::-moz-selection {
+  background: $color-lime;
+  // color: black;
+  color: #2a2f3f;
+  text-shadow: none;
+}
+::selection {
+  background: $color-lime;
+  // color: black;
+  color: #2a2f3f;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: $color-lime;
+  // color: black;
+  color: #2a2f3f;
+  text-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #252a38;
+  width: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
